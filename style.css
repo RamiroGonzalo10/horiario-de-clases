@@ -1,0 +1,161 @@
+/* --- 1. ESTILOS GENERALES Y RESETEO BÁSICO --- */
+* {
+    margin: 0;
+    padding: 10px; /* Padding general para dar espacio a los elementos */
+    box-sizing: border-box; /* Mejora el cálculo de tamaños */
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif; /* Fuente más moderna */
+    margin: 30px auto;
+    max-width: 1200px; /* Limita el ancho para que no se vea enorme en pantallas grandes */
+    padding: 0 20px;
+    background-color: #f0f8f2; /* Fondo general más suave, con tono verde muy claro */
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2,h3 {
+    text-align: center;
+    color: #118a34; /* Color principal verde oscuro */
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* --- 2. ESTILADO DE LA TABLA (Horario de clases) --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    border-radius: 10px; /* Esquinas redondeadas */
+    overflow: hidden; /* Recorta los bordes redondeados correctamente */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave para dar profundidad */
+}
+
+/* Estilo para celdas y encabezados: mantiene el padding de 15px solicitado */
+th,
+td {
+    padding: 15px; /*  Cumpliendo indicación original */
+    text-align: center;
+    border: none; /* Quitamos los bordes antiguos, separamos por fondo */
+    border-bottom: 2px solid #f2e6e0; /* Línea divisoria muy suave */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+th {
+    background-color: #909992; /* Verde oscuro solicitado */
+    color: rgb(124, 89, 89);
+    padding: 16px; /* Cumpliendo indicación original */
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- EFECTO CEBRA MEJORADO --- */
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /*  Blanco para filas impares */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #109bf8; /* Verde muy claro, tono más elegante que el anterior */
+}
+
+/* Efecto extra: resaltar fila al pasar el cursor */
+tbody tr:hover {
+    background-color: #230f47; /* Verde un poco más intenso al pasar el mouse */
+}
+
+/* Estilo para las materias: resaltar contenido */
+td {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+/* --- 3. CONTENEDOR MENÚ CON FLEXBOX (MEJORADO) --- */
+.contenedor-padre {
+    display: flex; /*  Contenedor Flexbox como se pidió */
+    justify-content:  space-evenly; /* Centramos los botones */
+   
+    gap: 20px; /* Más espacio entre botones */
+    margin-bottom: 40px;
+    border: 3px dashed #118a34; /* Borde verde para combinar con el tema */
+    padding: 15px 0; /* Padding vertical para dar espacio al contenedor */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.boton-hijo {
+    padding: 12px 30px; /* Botones más cómodos */
+    background-color: #cf34f2; /*  Color base que tenías */
+    color: #ffffff;
+    align-items: baseline;
+    text-decoration: none;
+    border-radius: 6px; /* Esquinas más suaves */
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease; /* Animación suave en todos los cambios */
+    box-shadow: 0 2px 4px rgba(17, 138, 52, 0.2);
+}
+
+.hijo1 {
+    padding: 12px 30px; /* Botones más cómodos */
+    background-color: #cf34f2; /*  Color base que tenías */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px; /* Esquinas más suaves */
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease; /* Animación suave en todos los cambios */
+    box-shadow: 0 2px 4px rgba(17, 138, 52, 0.2);
+}
+.hijo2 {
+    padding: 12px 30px; /* Botones más cómodos */
+    background-color: #343ef2; /*  Color base que tenías */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px; /* Esquinas más suaves */
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease; /* Animación suave en todos los cambios */
+    box-shadow: 0 2px 4px rgba(17, 138, 52, 0.2);
+}
+.hijo3 {
+    padding: 12px 30px; /* Botones más cómodos */
+    background-color: #f23434; /*  Color base que tenías */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px; /* Esquinas más suaves */
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease; /* Animación suave en todos los cambios */
+    box-shadow: 0 2px 4px rgba(17, 138, 52, 0.2);
+}
+.hijo1:hover {
+    background-color: #118a34; /* Verde oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de levantar el botón */
+    box-shadow: 0 4px 8px rgba(17, 138, 52, 0.3);
+}
+.hijo2:hover {
+    background-color: #118a34; /* Verde oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de levantar el botón */
+    box-shadow: 0 4px 8px rgba(17, 138, 52, 0.3);
+}
+.hijo3:hover {
+    background-color: #118a34; /* Verde oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de levantar el botón */
+    box-shadow: 0 4px 8px rgba(17, 138, 52, 0.3);
+}
+
+.hijo1:active {
+    transform: translateY(0); /* Vuelve a la posición al hacer clic */
+}
+.hijo2:active {
+    transform: translateY(0); /* Vuelve a la posición al hacer clic */
+}
+.hijo3:active {
+    transform: translateY(0); /* Vuelve a la posición al hacer clic */
+}
+
+
